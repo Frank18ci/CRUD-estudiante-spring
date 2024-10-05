@@ -19,4 +19,14 @@ public class EstudianteService implements IEstudianteService {
 	public Estudiante guardarEstudiante(Estudiante estudiante) {
 		return repository.save(estudiante);
 	}
+	public Estudiante actualizarEstudiante(Estudiante estudiante) {
+		return repository.save(estudiante);
+	}
+	public void eliminarEstudiante(Long id) {
+		repository.deleteById(id);
+	}
+	public Estudiante obtenerEstudiante(Long id) {
+		return repository.findById(id).get();
+	}
+	
 }
